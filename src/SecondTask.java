@@ -2,13 +2,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class SecondTask {
-    static double epsilon = 0.000_1;
-    static double delta = 0.00001;
+    static double epsilon = 0.000_01;
     private double[][] A;
 
     SecondTask() {
