@@ -85,7 +85,7 @@ public class ThirdTask {
             }
         }
 
-        Plotter plotter = new Plotter(arr_x, arr_solution, arr_approximation, max_diff, max_diff_i);
+        Plotter plotter = new Plotter(arr_x, arr_solution, arr_approximation, new ArrayList<>(), max_diff, max_diff_i);
         plotter.show_plots();
     }
 }
