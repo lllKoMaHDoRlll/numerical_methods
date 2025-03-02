@@ -23,6 +23,29 @@ public class Plotter {
         max_diff_i = max_diff_i_;
     }
 
+    public static void show_hyper_plots(ArrayList<Double> x, ArrayList<ArrayList<Double>> ys, ArrayList<ArrayList<Double>> solution) {
+        for (int i = 0; i < ys.size(); i++) {
+            XYChart chart = new XYChart(800, 600);
+            chart.getStyler().setZoomEnabled(true);
+            chart.getStyler().setZoomResetByDoubleClick(false);
+            chart.getStyler().setZoomResetByButton(true);
+            chart.getStyler().setZoomSelectionColor(new Color(0,0 , 192, 128));
+            chart.getStyler().setAnnotationLineStroke(new BasicStroke(1.0f));
+
+            System.out.println(x.size());
+            System.out.println(ys.get(i).size());
+
+            XYSeries series_solution = chart.addSeries("solution", x, solution.get(i));
+            XYSeries series_approximation = chart.addSeries("approximation", x, ys.get(i));
+
+            series_solution.setMarker(new None());
+            series_approximation.setMarker(new None());
+            series_solution.setLineStyle(SeriesLines.DASH_DASH);
+
+            new SwingWrapper<>(chart).displayChart();
+        }
+    }
+
     public void show_plots() {
         XYChart chart = new XYChart(800, 600);
         chart.getStyler().setZoomEnabled(true);
