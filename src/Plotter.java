@@ -83,8 +83,8 @@ public class Plotter {
 //        double[] max_diff_arr_x = {arr_x.get(max_diff_i), arr_x.get(max_diff_i)};
 //        double[] max_diff_arr_y = {arr_approximation.get(max_diff_i), arr_solution.get(max_diff_i)};
 //        chart.addSeries("Max difference: ".concat(Double.toString(max_diff)), max_diff_arr_x, max_diff_arr_y);
-        if (arr_approximation_double_precision.size() > 0) {
+//        if (arr_approximation_double_precision.size() > 0) {
             new SwingWrapper<>(chart).displayChart();
-        }
+//        }
     }
 }
